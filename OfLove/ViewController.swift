@@ -2,7 +2,8 @@
 //  ViewController.swift
 //  OfLove
 //
-//  Created by Екатерина  on 29.05.23.
+//  Created by Katsiaryna Kulik  on 29.05.23.
+//  Copyright © 2023 Katsiaryna Kulik. All rights reserved.
 //
 
 import UIKit
