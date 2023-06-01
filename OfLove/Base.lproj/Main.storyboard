@@ -16,22 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-Df-Lly" userLabel="BackgroundView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="fzL-Fs-AGv">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" red="0.77647060160000003" green="0.18823529780000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQk-uM-fhp">
-                                <rect key="frame" x="34" y="285" width="343" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ofLoveSecond" translatesAutoresizingMaskIntoConstraints="NO" id="FxH-Kw-VWq">
+                                <rect key="frame" x="46.666666666666657" y="196" width="300" height="460"/>
+                                <color key="tintColor" red="0.66274511810000003" green="0.15686275059999999" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="KtW-AM-9rp"/>
+                                    <constraint firstAttribute="height" constant="460" id="pHl-bt-xzO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQk-uM-fhp">
+                                <rect key="frame" x="20" y="284" width="353" height="86"/>
                                 <string key="text">36 QUESTIONS
 CHANGE YOUR LIFE</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWF-YU-Hmd">
-                                <rect key="frame" x="34" y="403" width="343" height="125.33333333333337"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWF-YU-Hmd">
+                                <rect key="frame" x="20" y="400" width="353" height="100.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="140" id="uLo-rC-8VC"/>
+                                </constraints>
                                 <string key="text">20 years ago, psychologist Arthur Aron conducted a simple experiment
 in his laboratory. He suggested female
 together to answer 36 questions</string>
@@ -39,10 +47,12 @@ together to answer 36 questions</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-Wo-Wa5">
-                                <rect key="frame" x="25" y="716" width="343" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-Wo-Wa5">
+                                <rect key="frame" x="20" y="733" width="353" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Szg-cw-Cce"/>
+                                </constraints>
                                 <color key="tintColor" red="0.77647060160000003" green="0.18823529780000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Start">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
@@ -52,19 +62,33 @@ together to answer 36 questions</string>
                         <viewLayoutGuide key="safeArea" id="v6m-fA-TSP"/>
                         <color key="backgroundColor" red="0.77647060160000003" green="0.18823529780000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="fdu-Df-Lly" firstAttribute="trailing" secondItem="v6m-fA-TSP" secondAttribute="trailing" id="Mrc-UO-c7P"/>
-                            <constraint firstItem="fdu-Df-Lly" firstAttribute="leading" secondItem="v6m-fA-TSP" secondAttribute="leading" id="YgQ-DA-IRP"/>
-                            <constraint firstItem="fdu-Df-Lly" firstAttribute="top" secondItem="XGr-HT-vLv" secondAttribute="top" id="YkK-RM-8OE"/>
-                            <constraint firstAttribute="bottom" secondItem="fdu-Df-Lly" secondAttribute="bottom" id="xVl-6z-iqx"/>
+                            <constraint firstItem="xQk-uM-fhp" firstAttribute="centerY" secondItem="XGr-HT-vLv" secondAttribute="centerY" constant="-99" id="08s-wY-SEf"/>
+                            <constraint firstItem="fzL-Fs-AGv" firstAttribute="leading" secondItem="v6m-fA-TSP" secondAttribute="leading" id="2Pb-Sf-kqB"/>
+                            <constraint firstItem="v6m-fA-TSP" firstAttribute="trailing" secondItem="b4O-Wo-Wa5" secondAttribute="trailing" constant="20" id="5Bb-N6-mVq"/>
+                            <constraint firstItem="v6m-fA-TSP" firstAttribute="bottom" secondItem="b4O-Wo-Wa5" secondAttribute="bottom" constant="35" id="8Ta-PJ-ip2"/>
+                            <constraint firstItem="FxH-Kw-VWq" firstAttribute="centerX" secondItem="XGr-HT-vLv" secondAttribute="centerX" id="8nF-iv-J69"/>
+                            <constraint firstItem="EWF-YU-Hmd" firstAttribute="leading" secondItem="v6m-fA-TSP" secondAttribute="leading" constant="20" id="9G6-Vt-2Ds"/>
+                            <constraint firstItem="xQk-uM-fhp" firstAttribute="leading" secondItem="v6m-fA-TSP" secondAttribute="leading" constant="20" id="Kpk-Tz-0DO"/>
+                            <constraint firstItem="fzL-Fs-AGv" firstAttribute="top" secondItem="XGr-HT-vLv" secondAttribute="top" id="RDA-ww-74p"/>
+                            <constraint firstAttribute="bottom" secondItem="fzL-Fs-AGv" secondAttribute="bottom" id="WuY-HZ-Eda"/>
+                            <constraint firstItem="v6m-fA-TSP" firstAttribute="trailing" secondItem="EWF-YU-Hmd" secondAttribute="trailing" constant="20" id="XdV-PD-GJy"/>
+                            <constraint firstItem="FxH-Kw-VWq" firstAttribute="centerY" secondItem="XGr-HT-vLv" secondAttribute="centerY" id="ZTW-Pc-EKX"/>
+                            <constraint firstItem="b4O-Wo-Wa5" firstAttribute="leading" secondItem="v6m-fA-TSP" secondAttribute="leading" constant="20" id="bNO-t6-lcO"/>
+                            <constraint firstItem="v6m-fA-TSP" firstAttribute="trailing" secondItem="xQk-uM-fhp" secondAttribute="trailing" constant="20" id="bhs-B9-6Dg"/>
+                            <constraint firstItem="v6m-fA-TSP" firstAttribute="trailing" secondItem="b4O-Wo-Wa5" secondAttribute="trailing" constant="20" id="gWU-qU-RVp"/>
+                            <constraint firstItem="fzL-Fs-AGv" firstAttribute="trailing" secondItem="v6m-fA-TSP" secondAttribute="trailing" id="uLb-Ai-9oI"/>
+                            <constraint firstItem="b4O-Wo-Wa5" firstAttribute="leading" secondItem="v6m-fA-TSP" secondAttribute="leading" constant="20" id="xsu-n0-OiV"/>
+                            <constraint firstItem="EWF-YU-Hmd" firstAttribute="top" secondItem="xQk-uM-fhp" secondAttribute="bottom" constant="30" id="yRG-BA-9WH"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="customBackgroundView" destination="fdu-Df-Lly" id="Krk-4g-o0t"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hrm-Xh-R2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="829.7709923664122" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launchScreenBackground" width="750" height="1334"/>
+        <image name="ofLoveSecond" width="709" height="932"/>
+    </resources>
 </document>

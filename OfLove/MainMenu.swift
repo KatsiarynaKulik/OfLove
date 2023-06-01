@@ -16,17 +16,7 @@ class MainMenu: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    applyGradientForBackground()
-  }
 
-  private func applyGradientForBackground() {
-    let gradientLayer = CAGradientLayer()
-    gradientLayer.frame = view.bounds
-    gradientLayer.colors = [
-      UIColor.systemRed.cgColor,
-      UIColor.systemPink.cgColor
-    ]
-    customBackgroundView.layer.addSublayer(gradientLayer)
   }
 }
 
