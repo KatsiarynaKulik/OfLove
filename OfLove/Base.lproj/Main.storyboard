@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +22,8 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ofLoveSecond" translatesAutoresizingMaskIntoConstraints="NO" id="FxH-Kw-VWq">
                                 <rect key="frame" x="46.666666666666657" y="196" width="300" height="460"/>
-                                <color key="tintColor" red="0.66274511810000003" green="0.15686275059999999" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="KtW-AM-9rp"/>
                                     <constraint firstAttribute="height" constant="460" id="pHl-bt-xzO"/>
@@ -57,6 +59,9 @@ together to answer 36 questions</string>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Start">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="2UZ-bI-5Hf" kind="show" id="ls3-Uv-NtJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v6m-fA-TSP"/>
@@ -81,14 +86,48 @@ together to answer 36 questions</string>
                             <constraint firstItem="EWF-YU-Hmd" firstAttribute="top" secondItem="xQk-uM-fhp" secondAttribute="bottom" constant="30" id="yRG-BA-9WH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageViewOfLove" destination="FxH-Kw-VWq" id="IQv-q5-WJQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hrm-Xh-R2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="829.7709923664122" y="-2.1126760563380285"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="CGD-d7-pC0">
+            <objects>
+                <viewController id="2UZ-bI-5Hf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3j3-7W-rMI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="NeT-7J-gOV">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O5s-cY-wQU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NeT-7J-gOV" firstAttribute="trailing" secondItem="O5s-cY-wQU" secondAttribute="trailing" id="4c4-wd-Myo"/>
+                            <constraint firstItem="NeT-7J-gOV" firstAttribute="top" secondItem="O5s-cY-wQU" secondAttribute="top" id="jLe-YE-FAu"/>
+                            <constraint firstItem="NeT-7J-gOV" firstAttribute="leading" secondItem="O5s-cY-wQU" secondAttribute="leading" id="q9n-hM-QZQ"/>
+                            <constraint firstItem="NeT-7J-gOV" firstAttribute="bottom" secondItem="O5s-cY-wQU" secondAttribute="bottom" id="z2b-iR-rKA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="goQ-SG-c1R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7JJ-vG-Ken" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698.4732824427481" y="13.380281690140846"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="background" width="750" height="1334"/>
         <image name="launchScreenBackground" width="750" height="1334"/>
         <image name="ofLoveSecond" width="709" height="932"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

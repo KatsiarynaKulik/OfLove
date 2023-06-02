@@ -7,16 +7,34 @@
 //
 
 import UIKit
+import CoreImage
 
 class MainMenu: UIViewController {
 
 
   @IBOutlet var customBackgroundView: UIView!
 
+  @IBOutlet var imageViewOfLove: UIImageView!
+
   override func viewDidLoad() {
     super.viewDidLoad()
-
+//applyGradientForImageViewBackground()
 
   }
+
+  // градиент
+//  private func applyGradientForImageViewBackground() {
+//    let gradientLayer = CAGradientLayer()
+//    gradientLayer.frame = imageViewOfLove.bounds
+//    gradientLayer.colors = [
+//      UIColor.systemBlue.cgColor,
+//      UIColor.systemPink.cgColor
+//    ]
+//    imageViewOfLove.layer.addSublayer(gradientLayer)
+//  }
+
 }
+
+
+
 
