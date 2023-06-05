@@ -13,6 +13,7 @@
 		C43390F02A25384A001ACD21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43390EF2A25384A001ACD21 /* Assets.xcassets */; };
 		C43390F32A25384A001ACD21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43390F12A25384A001ACD21 /* LaunchScreen.storyboard */; };
 		C43390FD2A27D525001ACD21 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43390FC2A27D525001ACD21 /* MainMenu.swift */; };
+		C4D021EB2A2E07B900F5D7C2 /* PageForQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D021EA2A2E07B900F5D7C2 /* PageForQuestions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C43390F22A25384A001ACD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C43390F42A25384A001ACD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C43390FC2A27D525001ACD21 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		C4D021EA2A2E07B900F5D7C2 /* PageForQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageForQuestions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C43390E62A253849001ACD21 /* AppDelegate.swift */,
 				C43390E82A253849001ACD21 /* SceneDelegate.swift */,
 				C43390EC2A253849001ACD21 /* Main.storyboard */,
+				C4D021EA2A2E07B900F5D7C2 /* PageForQuestions.swift */,
 				C43390FC2A27D525001ACD21 /* MainMenu.swift */,
 				C43390EF2A25384A001ACD21 /* Assets.xcassets */,
 				C43390F12A25384A001ACD21 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D021EB2A2E07B900F5D7C2 /* PageForQuestions.swift in Sources */,
 				C43390E72A253849001ACD21 /* AppDelegate.swift in Sources */,
 				C43390E92A253849001ACD21 /* SceneDelegate.swift in Sources */,
 				C43390FD2A27D525001ACD21 /* MainMenu.swift in Sources */,
