@@ -9,75 +9,102 @@
 import UIKit
 
 class PageForQuestions: UIViewController {
-
+  
   let listOfQuestions: [String] = [
-    "If you could invite someone to dinner (a loved one, a deceased relative, a celebrity), who would you choose?",
-    "Would you like to be famous? In what?",
-    "Before you make a call, do you happen to rehearse your line? Why?",
-    "What would be your «perfect day»?",
-    "When was the last time you sang alone? And for someone else?",
-    "If you could live to be 90 and have either the mind or body of a 30 year old for the last 60 years, which would you choose?",
-    "Do you have a secret premonition of how you will die?",
-    "Name three traits that you think both you and your partner have.",
-    "What are you most grateful for?",
-    "If you could, what would you change about the way you were raised?",
-    "In 4 minutes, tell your partner the story of your life in as much detail as possible.",
-    "If you could wake up tomorrow with one skill or ability, what would it be?",
-    "If a magic crystal could reveal the truth to you, what would you like to know?",
-    "Is there something you have been dreaming of doing for a long time? Why haven't you done it yet?",
-    "What is the greatest achievement of your life?",
-    "What is most valuable to you in friendship?",
+    "Given the choice of anyone in the world, whom would you want as a dinner guest?",
+    "Would you like to be famous? In what way?",
+    "Before making a telephone call, do you ever rehearse what you are going to say? Why?",
+    "What would constitute a “perfect” day for you?",
+    "When did you last sing to yourself? To someone else?",
+    "If you were able to live to the age of 90 and retain either the mind or body of a 30-year-old for the last 60 years of your life, which would you want?",
+    "Do you have a secret hunch about how you will die?",
+    "Name three things you and your partner appear to have in common.",
+    "For what in your life do you feel most grateful?",
+    "If you could change anything about the way you were raised, what would it be?",
+    "Take four minutes and tell your partner your life story in as much detail as possible.",
+    "If you could wake up tomorrow having gained any one quality or ability, what would it be?",
+    "If a crystal ball could tell you the truth about yourself, your life, the future, or anything else, what would you want to know?",
+    "Is there something that you’ve dreamed of doing for a long time? Why haven’t you done it?",
+    "What is the greatest accomplishment of your life?",
+    "What do you value most in a friendship?",
     "What is your most treasured memory?",
-    "What is your worst memory?",
-    "If you knew you were going to die in a year, what would you change about the way you live? Why?",
+    "What is your most terrible memory?",
+    "If you knew that in one year you would die suddenly, would you change anything about the way you are now living? Why?",
     "What does friendship mean to you?",
-    "What role do love and tenderness play in your life?",
-    "Take turns calling your partner his positive traits (exchange five characteristics).",
-    "Are relationships warm and close in your family?",
-    "How do you feel about your interactions with your mother?",
-    "Make three statements each that are true for both of you. For example: «We both feel right now...»",
-    "Complete the sentence: «I wish there was someone to share with…» ",
-    "If you were going to become a close friend to your partner, what would you tell him: what do you think he should know about you?",
-    "Tell your partner what you like about him; speak directly, say things that you could not say to a casual acquaintance.",
-    "Share an embarrassing situation or embarrassing moment in your life with your partner.",
-    "When was the last time you cried in front of someone? And in loneliness?",
-    "Tell your partner what you already appreciate in him (her).",
-    "Which topic do you think is too serious to joke about?",
-    "If you were to die before the end of the day today without talking to anyone, what would you most regret not saying? Why haven't you said this yet?",
-    "Your house with all the property caught fire. After saving your loved ones as well as pets, you have time to run into the house and save something else from the flames. What would you take? Why?",
-    "The death of which member of your family would upset you the most? Why?",
-    "Share a personal problem and ask your partner how they would handle it. Then ask him what he thinks about your feelings about the issue.",
+    "What roles do love and affection play in your life?",
+    "Alternate sharing something you consider a positive characteristic of your partner. Share a total of five items.",
+    "How close and warm is your family? Do you feel your childhood was happier than most other people’s?",
+    "How do you feel about your relationship with your mother?",
+    "Make three true “we” statements each. For instance, “We are both in this room feeling…” ",
+    "Complete this sentence: “I wish I had someone with whom I could share…”",
+    "If you were going to become a close friend with your partner, please share what would be important for them to know.",
+    "Tell your partner what you like about them; be very honest this time, saying things that you might not say to someone you’ve just met.",
+    "Share with your partner an embarrassing moment in your life.",
+    "When did you last cry in front of another person? By yourself?",
+    "Tell your partner something that you like about them [already].",
+    "What, if anything, is too serious to be joked about?",
+    "If you were to die this evening with no opportunity to communicate with anyone, what would you most regret not having told someone? Why haven’t you told them yet?",
+    "Your house, containing everything you own, catches fire. After saving your loved ones and pets, you have time to safely make a final dash to save any one item. What would it be? Why?",
+    "Of all the people in your family, whose death would you find most disturbing? Why?",
+    "Share a personal problem and ask your partner’s advice on how they might handle it. Also, ask your partner to reflect back to you how you seem to be feeling about the problem you have chosen."
   ]
-
+  
   let questionNumber: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36"
   ]
-
+  
   var currentQuestionIndex = 0
-  var currentQQuestionNumberIndex = 0
-
+  var currentQuestionNumberIndex = 0
+  // Скрытие кнопки Back
+  let indexZero = 0
+  func hidingButtonBack() {
+    if questionLabel.text == listOfQuestions[indexZero] {
+      backButton.isHidden = true
+    } else {
+      backButton.isHidden = false
+    }
+  }
+  
   @IBOutlet var questionNumberLabel: UILabel!
   @IBOutlet var questionLabel: UILabel!
-  @IBOutlet var button: UIButton!
-
+  @IBOutlet var backButton: UIButton!
+  @IBOutlet var nextFinishButton: UIButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
-
+  
   @IBAction func nextButton(_ sender: UIButton) {
     // Выводим текущий элемент массива в Label
     questionLabel.text = listOfQuestions[currentQuestionIndex]
-    questionNumberLabel.text = questionNumber[currentQQuestionNumberIndex]
-
+    questionNumberLabel.text = questionNumber[currentQuestionNumberIndex]
+    
     if currentQuestionIndex == listOfQuestions.count - 1 {
       // Изменяется текст кнопки
-      button.setTitle("Finish >", for: .normal)
+      nextFinishButton.setTitle("Finish", for: .normal)
     }
-
+    
     // Увеличиваем индекс для следующего нажатия
     currentQuestionIndex += 1
-    currentQQuestionNumberIndex += 1
+    currentQuestionNumberIndex += 1
+    
+    hidingButtonBack()
+  }
 
+  @IBAction func backButton(_ sender: UIButton) {
+    // Выводим предыдущий элемент массива в Label
+    questionLabel.text = listOfQuestions[currentQuestionIndex - 1]
+    questionNumberLabel.text = questionNumber[currentQuestionNumberIndex - 1]
+
+    // Уменьшаем индекс для следующего нажатия
+    currentQuestionIndex -= 1
+    currentQuestionNumberIndex -= 1
+
+    hidingButtonBack()
   }
 }
+
+
+
+
 
 
