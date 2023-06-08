@@ -79,47 +79,48 @@ class PageForQuestions: UIViewController {
     questionLabel.text = listOfQuestions[currentQuestionIndex]
     questionNumberLabel.text = questionNumber[currentQuestionNumberIndex]
     
+    // Изменяется текст кнопки
     if currentQuestionIndex == listOfQuestions.index(before: 36) {
-      // Изменяется текст кнопки
       nextFinishButton.setTitle("Finish", for: .normal)
     }
     
     // Увеличиваем индекс для следующего нажатия
     currentQuestionIndex += 1
     currentQuestionNumberIndex += 1
-
+    
     // Проверяем, достигли ли конца массива после увеличения индекса
     if currentQuestionIndex >= listOfQuestions.count {
       // Создаем экземпляр следующего экрана
       let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
       let nextViewController = storyBoard.instantiateViewController(withIdentifier: "timierViewCon")
+      nextViewController.modalPresentationStyle = .fullScreen
       self.present(nextViewController, animated: true, completion: nil)
-
+      
       // Выполняем переход на следующий экран с использованием навигационного контроллера
       navigationController?.pushViewController(nextViewController, animated: true)
-
+      
     }
     
     hidingButtonBack()
   }
-
+  
   @IBAction func backButton(_ sender: UIButton) {
     // Выводим предыдущий элемент массива в Label
     questionLabel.text = listOfQuestions[currentQuestionIndex - 1]
     questionNumberLabel.text = questionNumber[currentQuestionNumberIndex - 1]
-
+    
     // Уменьшаем индекс для следующего нажатия
     currentQuestionIndex -= 1
     currentQuestionNumberIndex -= 1
-
+    
     hidingButtonBack()
   }
-
+  
   @IBAction func stopTestButtonPressed(_ sender: UIButton) {
     // dismiss(animated: true, completion: nil)
     self.presentingViewController!.dismiss(animated: false, completion: nil)
   }
-
+  
 }
 
 
