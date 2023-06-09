@@ -10,7 +10,7 @@ import UIKit
 
 class Timer: UIViewController {
 
-  var timer: Timer?
+  var timer: Timerr?
       var counter = 0
 
   @IBOutlet var timerLabel: UILabel!
@@ -19,7 +19,7 @@ class Timer: UIViewController {
         super.viewDidLoad()
 
       // Создаем таймер, вызывающий метод updateTimer каждую секунду
-      timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+      timer = Timerr.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
           }
 
           @objc func updateTimer() {
