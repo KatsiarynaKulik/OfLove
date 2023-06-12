@@ -223,10 +223,10 @@ together to answer 36 questions</string>
             </objects>
             <point key="canvasLocation" x="3470.9923664122134" y="-2.1126760563380285"/>
         </scene>
-        <!--Timer-->
+        <!--Timer View Controller-->
         <scene sceneID="9F9-xy-iFX">
             <objects>
-                <viewController storyboardIdentifier="timierViewCon" id="sCw-jT-iSi" customClass="Timer" customModule="OfLove" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="timierViewCon" id="sCw-jT-iSi" customClass="TimerViewController" customModule="OfLove" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sAk-cy-pq6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,20 +238,30 @@ together to answer 36 questions</string>
                                 <color key="textColor" red="0.74901962280000001" green="0.18039217590000001" blue="0.22745099660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dob-vA-Vh4">
-                                <rect key="frame" x="101" y="284" width="191" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNW-ke-yHh">
+                                <rect key="frame" x="20" y="733" width="353" height="50"/>
+                                <color key="backgroundColor" red="0.77647060160000003" green="0.18823529780000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hIg-Tm-XOW"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Eez-UW-Q5O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eez-UW-Q5O" firstAttribute="trailing" secondItem="dNW-ke-yHh" secondAttribute="trailing" constant="20" id="LGv-gG-P3g"/>
+                            <constraint firstItem="Eez-UW-Q5O" firstAttribute="bottom" secondItem="dNW-ke-yHh" secondAttribute="bottom" constant="35" id="fdN-ef-O5s"/>
+                            <constraint firstItem="dNW-ke-yHh" firstAttribute="leading" secondItem="Eez-UW-Q5O" secondAttribute="leading" constant="20" id="hFW-BQ-Ujv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L6b-vA-1JD"/>
                     <connections>
-                        <outlet property="timerLabel" destination="dob-vA-Vh4" id="q0v-HV-LaZ"/>
+                        <outlet property="labelTimer" destination="gO9-4C-A5a" id="f92-AB-Hop"/>
+                        <outlet property="startButton" destination="dNW-ke-yHh" id="L5x-TG-VV4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mds-Qn-Oxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
