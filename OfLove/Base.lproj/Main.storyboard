@@ -249,6 +249,28 @@ together to answer 36 questions</string>
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
                                 </buttonConfiguration>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="240" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojW-20-Uoq">
+                                <rect key="frame" x="123" y="383" width="147" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="0.77647060160000003" green="0.18823529780000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UkV-AI-7YF">
+                                <rect key="frame" x="46" y="276" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywz-M2-Zd9">
+                                <rect key="frame" x="20" y="661" width="353" height="50"/>
+                                <color key="backgroundColor" red="0.77647060160000003" green="0.18823529780000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="p0W-4n-lFO"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Eez-UW-Q5O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -262,6 +284,9 @@ together to answer 36 questions</string>
                     <connections>
                         <outlet property="labelTimer" destination="gO9-4C-A5a" id="f92-AB-Hop"/>
                         <outlet property="startButton" destination="dNW-ke-yHh" id="L5x-TG-VV4"/>
+                        <outlet property="stopButton" destination="ywz-M2-Zd9" id="V0Z-SA-zaH"/>
+                        <outlet property="timerImageView" destination="UkV-AI-7YF" id="tdX-Jc-27e"/>
+                        <outlet property="timetLabel" destination="ojW-20-Uoq" id="JiZ-ae-PpS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mds-Qn-Oxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
