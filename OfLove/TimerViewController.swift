@@ -10,25 +10,25 @@ import UIKit
 
 class TimerViewController: UIViewController {
 
-  @IBOutlet var labelTimer: UILabel!
+  @IBOutlet var label: UILabel!
   @IBOutlet var timerImageView: UIImageView!
-  @IBOutlet var timetLabel: UILabel!
+  @IBOutlet var timerLabel: UILabel!
   @IBOutlet var startButton: UIButton!
-  @IBOutlet var stopButton: UIButton!
 
   var timer = Timer()
-
   let shapeLayer = CAShapeLayer()
-
   var durationTimer = 240
 
   override func viewDidLayoutSubviews() {
+
     super.viewDidLayoutSubviews()
     self.animationCircular()
   }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      startButton.layer.cornerRadius = 25
+      timerLabel.text = "\(durationTimer)"
 
       startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
     }
@@ -38,16 +38,22 @@ class TimerViewController: UIViewController {
     basicAnimation()
 
     timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timetAction), userInfo: nil, repeats: true)
+
+    // Меняем кнопку старт при запуске таймера на стоп
+
+    startButton.setTitle("Stop", for: .normal)
+
   }
 
   @objc func timetAction() {
 
     durationTimer -= 1
-    timetLabel.text = "\(durationTimer)"
+    timerLabel.text = "\(durationTimer)"
     print("\(durationTimer)")
 
     if durationTimer == 0 {
       timer.invalidate()
+      startButton.setTitle("Start", for: .normal)
     }
   }
 
@@ -81,3 +87,4 @@ class TimerViewController: UIViewController {
     shapeLayer.add(basicAnimation, forKey: "basicAnimation")
   }
 }
+

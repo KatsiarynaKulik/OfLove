@@ -13,11 +13,13 @@ class MainMenu: UIViewController {
 
 
   @IBOutlet var customBackgroundView: UIView!
-
   @IBOutlet var imageViewOfLove: UIImageView!
+  @IBOutlet var GetStartButton: UIButton!
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    GetStartButton.layer.cornerRadius = 25
+
 //applyGradientForImageViewBackground()
 
   }
