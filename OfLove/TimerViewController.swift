@@ -15,12 +15,11 @@ class TimerViewController: UIViewController {
   @IBOutlet var timerLabel: UILabel!
   @IBOutlet var startButton: UIButton!
 
-  var timer = Timer()
+  var timer = Timer() //Timer?
   let shapeLayer = CAShapeLayer()
-  var durationTimer = 240
+  var durationTimer = 5
 
   override func viewDidLayoutSubviews() {
-
     super.viewDidLayoutSubviews()
     self.animationCircular()
   }
@@ -37,19 +36,17 @@ class TimerViewController: UIViewController {
 
     basicAnimation()
 
-    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timetAction), userInfo: nil, repeats: true)
+    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
 
     // Меняем кнопку старт при запуске таймера на стоп
-
     startButton.setTitle("Stop", for: .normal)
 
   }
 
-  @objc func timetAction() {
+  @objc func timerAction() {
 
     durationTimer -= 1
     timerLabel.text = "\(durationTimer)"
-    print("\(durationTimer)")
 
     if durationTimer == 0 {
       timer.invalidate()
@@ -87,4 +84,3 @@ class TimerViewController: UIViewController {
     shapeLayer.add(basicAnimation, forKey: "basicAnimation")
   }
 }
-
