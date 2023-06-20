@@ -15,54 +15,66 @@ class TimerViewController: UIViewController {
   @IBOutlet var timerLabel: UILabel!
   @IBOutlet var startButton: UIButton!
 
-  var timer = Timer() //Timer?
+  var timer: Timer?
   let shapeLayer = CAShapeLayer()
   var durationTimer = 5
+  let originalDuration = 5
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     self.animationCircular()
   }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      startButton.layer.cornerRadius = 25
-      timerLabel.text = "\(durationTimer)"
-
-      startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
-    }
-
-  @objc func startButtonTapped() {
-
-    basicAnimation()
-
-    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-
-    // Меняем кнопку старт при запуске таймера на стоп
-    startButton.setTitle("Stop", for: .normal)
-
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    startButton.layer.cornerRadius = 25
+    timerLabel.text = "\(durationTimer)"
+    startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
   }
 
-  @objc func timerAction() {
+  @objc func startButtonTapped() {
+    if timer == nil {
+      startTimer()
+    } else {
+      stopTimer()
+    }
+  }
 
+  func startTimer() {
+    basicAnimation()
+
+    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timetAction), userInfo: nil, repeats: true)
+
+    startButton.setTitle("Stop", for: .normal)
+  }
+
+  func stopTimer() {
+    timer?.invalidate()
+    timer = nil
+
+    shapeLayer.removeAllAnimations()
+
+    startButton.setTitle("Start", for: .normal)
+
+    durationTimer = originalDuration
+    timerLabel.text = "\(durationTimer)"
+  }
+
+  @objc func timetAction() {
     durationTimer -= 1
     timerLabel.text = "\(durationTimer)"
 
     if durationTimer == 0 {
-      timer.invalidate()
-      startButton.setTitle("Start", for: .normal)
+      stopTimer()
     }
   }
 
   //MARK: Animation
 
   func animationCircular() {
-
     let center = CGPoint(x: timerImageView.frame.width / 2, y: timerImageView.frame.height / 2)
-
     let endAngle = (-CGFloat.pi / 2)
     let startAngle = 2 * CGFloat.pi + endAngle
-
     let circularPath = UIBezierPath(arcCenter: center, radius: 138, startAngle: startAngle, endAngle: endAngle, clockwise: false)
 
     shapeLayer.path = circularPath.cgPath
@@ -76,7 +88,6 @@ class TimerViewController: UIViewController {
 
   func basicAnimation() {
     let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-
     basicAnimation.toValue = 0
     basicAnimation.duration = CFTimeInterval(durationTimer)
     basicAnimation.fillMode = CAMediaTimingFillMode.forwards
