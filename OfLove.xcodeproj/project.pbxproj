@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C41C3A6E2A375B4A00BE0AE8 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C3A6D2A375B4A00BE0AE8 /* TimerViewController.swift */; };
+		C41C3A702A4341B100BE0AE8 /* FinalScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C3A6F2A4341B100BE0AE8 /* FinalScreenViewController.swift */; };
 		C43390E72A253849001ACD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43390E62A253849001ACD21 /* AppDelegate.swift */; };
 		C43390E92A253849001ACD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43390E82A253849001ACD21 /* SceneDelegate.swift */; };
 		C43390EE2A253849001ACD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43390EC2A253849001ACD21 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		C41C3A6D2A375B4A00BE0AE8 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		C41C3A6F2A4341B100BE0AE8 /* FinalScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalScreenViewController.swift; sourceTree = "<group>"; };
 		C43390E32A253849001ACD21 /* OfLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43390E62A253849001ACD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C43390E82A253849001ACD21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				C43390E62A253849001ACD21 /* AppDelegate.swift */,
 				C43390E82A253849001ACD21 /* SceneDelegate.swift */,
 				C43390EC2A253849001ACD21 /* Main.storyboard */,
+				C41C3A6F2A4341B100BE0AE8 /* FinalScreenViewController.swift */,
 				C41C3A6D2A375B4A00BE0AE8 /* TimerViewController.swift */,
 				C4D021EA2A2E07B900F5D7C2 /* PageForQuestions.swift */,
 				C43390FC2A27D525001ACD21 /* MainMenu.swift */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C41C3A6E2A375B4A00BE0AE8 /* TimerViewController.swift in Sources */,
+				C41C3A702A4341B100BE0AE8 /* FinalScreenViewController.swift in Sources */,
 				C4D021EB2A2E07B900F5D7C2 /* PageForQuestions.swift in Sources */,
 				C43390E72A253849001ACD21 /* AppDelegate.swift in Sources */,
 				C43390E92A253849001ACD21 /* SceneDelegate.swift in Sources */,

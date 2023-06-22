@@ -17,8 +17,8 @@ class TimerViewController: UIViewController {
 
   var timer: Timer?
   let shapeLayer = CAShapeLayer()
-  var durationTimer = 5
-  let originalDuration = 5
+  var durationTimer = 2
+  let originalDuration = 2
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
@@ -58,6 +58,7 @@ class TimerViewController: UIViewController {
 
     durationTimer = originalDuration
     timerLabel.text = "\(durationTimer)"
+
   }
 
   @objc func timetAction() {
@@ -65,7 +66,14 @@ class TimerViewController: UIViewController {
     timerLabel.text = "\(durationTimer)"
 
     if durationTimer == 0 {
-      stopTimer()
+        // Создаем экземпляр следующего экрана
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FinalScreen")
+        nextViewController.modalPresentationStyle = .fullScreen
+        self.present(nextViewController, animated: true, completion: nil)
+
+        // Выполняем переход на следующий экран с использованием навигационного контроллера
+        navigationController?.pushViewController(nextViewController, animated: true)
     }
   }
 
@@ -95,3 +103,4 @@ class TimerViewController: UIViewController {
     shapeLayer.add(basicAnimation, forKey: "basicAnimation")
   }
 }
+
