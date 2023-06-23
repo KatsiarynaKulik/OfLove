@@ -69,9 +69,10 @@ class PageForQuestions: UIViewController {
   @IBOutlet var questionLabel: UILabel!
   @IBOutlet var backButton: UIButton!
   @IBOutlet var nextFinishButton: UIButton!
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
+    
   }
   
   @IBAction func nextButton(_ sender: UIButton) {
@@ -87,8 +88,8 @@ class PageForQuestions: UIViewController {
     // Увеличиваем индекс для следующего нажатия
     currentQuestionIndex += 1
     currentQuestionNumberIndex += 1
-    
-    // Проверяем, достигли ли конца массива после увеличения индекса
+
+  // Проверяем, достигли ли конца массива после увеличения индекса
     if currentQuestionIndex >= listOfQuestions.count {
       // Создаем экземпляр следующего экрана
       let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -116,7 +117,7 @@ class PageForQuestions: UIViewController {
     hidingButtonBack()
   }
   
-  @IBAction func stopTestButtonPressed(_ sender: UIButton) {
+  @IBAction func restartButtonPressed(_ sender: UIButton) {
     // dismiss(animated: true, completion: nil)
     self.presentingViewController!.dismiss(animated: false, completion: nil)
   }

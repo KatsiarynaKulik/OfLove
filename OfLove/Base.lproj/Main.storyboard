@@ -38,13 +38,11 @@ CHANGE YOUR LIFE</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWF-YU-Hmd">
-                                <rect key="frame" x="20" y="400" width="353" height="100.33333333333331"/>
+                                <rect key="frame" x="20" y="400.00000000000006" width="353" height="225.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="250" constant="140" id="uLo-rC-8VC"/>
                                 </constraints>
-                                <string key="text">20 years ago, psychologist Arthur Aron conducted a simple experiment
-in his laboratory. He suggested female
-together to answer 36 questions</string>
+                                <string key="text">The so-called 36 questions to fall in love are a set of questions developed in the 1990s by psychologists Arthur Aron, Ph.D., Elaine Aron, Ph.D., and other researchers to see if two strangers can develop an intimate connection just from asking each other a series of increasingly personal questions.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -95,7 +93,7 @@ together to answer 36 questions</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hrm-Xh-R2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683.2061068702287" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="2681.679389312977" y="-2.1126760563380285"/>
         </scene>
         <!--Page For Questions-->
         <scene sceneID="CGD-d7-pC0">
@@ -108,7 +106,7 @@ together to answer 36 questions</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="NeT-7J-gOV">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWE-9H-A5f">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWE-9H-A5f">
                                 <rect key="frame" x="263" y="10" width="110" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HuP-Aw-6yS"/>
@@ -116,11 +114,11 @@ together to answer 36 questions</string>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Stop Test">
+                                <buttonConfiguration key="configuration" style="plain" title="Restart">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="stopTestButtonPressed:" destination="2UZ-bI-5Hf" eventType="touchUpInside" id="acu-wB-OLA"/>
+                                    <action selector="restartButtonPressed:" destination="2UZ-bI-5Hf" eventType="touchUpInside" id="acu-wB-OLA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qco-nw-wyj">
@@ -263,7 +261,7 @@ together to answer 36 questions</string>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Eez-UW-Q5O"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Eez-UW-Q5O" firstAttribute="trailing" secondItem="dNW-ke-yHh" secondAttribute="trailing" constant="20" id="LGv-gG-P3g"/>
                             <constraint firstItem="Eez-UW-Q5O" firstAttribute="bottom" secondItem="dNW-ke-yHh" secondAttribute="bottom" constant="35" id="fdN-ef-O5s"/>
@@ -311,7 +309,7 @@ together to answer 36 questions</string>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wD7-Uh-jId"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="shareViaButton" destination="SeP-Be-wn8" id="9Tu-xt-40e"/>
