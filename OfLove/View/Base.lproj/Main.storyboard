@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Menu-->
+        <!--Main Menu View Controller-->
         <scene sceneID="xGc-vO-J7a">
             <objects>
-                <viewController id="RXQ-jp-XB2" customClass="MainMenu" customModule="OfLove" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RXQ-jp-XB2" customClass="MainMenuViewController" customModule="OfLove" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XGr-HT-vLv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@ CHANGE YOUR LIFE</string>
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="2UZ-bI-5Hf" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="Wgg-Vg-a8W"/>
+                                    <segue destination="2UZ-bI-5Hf" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="ke2-7r-wId"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,18 +87,17 @@ CHANGE YOUR LIFE</string>
                     <navigationItem key="navigationItem" id="rIo-oW-Kav"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="GetStartButton" destination="b4O-Wo-Wa5" id="dRk-SN-rqn"/>
-                        <outlet property="imageViewOfLove" destination="FxH-Kw-VWq" id="IQv-q5-WJQ"/>
+                        <outlet property="getStartButton" destination="b4O-Wo-Wa5" id="eH3-ez-bBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hrm-Xh-R2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2681.679389312977" y="-2.1126760563380285"/>
         </scene>
-        <!--Page For Questions-->
+        <!--Page For Questions View Controller-->
         <scene sceneID="CGD-d7-pC0">
             <objects>
-                <viewController id="2UZ-bI-5Hf" customClass="PageForQuestions" customModule="OfLove" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2UZ-bI-5Hf" customClass="PageForQuestionsViewController" customModule="OfLove" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3j3-7W-rMI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,7 +105,7 @@ CHANGE YOUR LIFE</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="NeT-7J-gOV">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWE-9H-A5f">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWE-9H-A5f">
                                 <rect key="frame" x="263" y="10" width="110" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HuP-Aw-6yS"/>
@@ -118,7 +117,7 @@ CHANGE YOUR LIFE</string>
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="restartButtonPressed:" destination="2UZ-bI-5Hf" eventType="touchUpInside" id="acu-wB-OLA"/>
+                                    <action selector="restartButton:" destination="2UZ-bI-5Hf" eventType="touchUpInside" id="acu-wB-OLA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qco-nw-wyj">
@@ -194,6 +193,7 @@ CHANGE YOUR LIFE</string>
                             <constraint firstItem="sWE-9H-A5f" firstAttribute="top" secondItem="O5s-cY-wQU" secondAttribute="top" constant="10" id="4FV-4h-fck"/>
                             <constraint firstItem="O5s-cY-wQU" firstAttribute="bottom" secondItem="6eI-ci-A1A" secondAttribute="bottom" constant="30" id="5md-Z7-SK3"/>
                             <constraint firstItem="IyF-PQ-dNZ" firstAttribute="leading" secondItem="O5s-cY-wQU" secondAttribute="leading" constant="16" id="CN9-ik-ffF"/>
+                            <constraint firstItem="sWE-9H-A5f" firstAttribute="leading" secondItem="O5s-cY-wQU" secondAttribute="leading" constant="263" id="GcK-Fy-aX5"/>
                             <constraint firstItem="NeT-7J-gOV" firstAttribute="top" secondItem="3j3-7W-rMI" secondAttribute="top" id="INi-0l-l50"/>
                             <constraint firstItem="QtW-Pj-WEW" firstAttribute="top" secondItem="O5s-cY-wQU" secondAttribute="top" constant="70" id="KGQ-yE-TEc"/>
                             <constraint firstItem="NeT-7J-gOV" firstAttribute="leading" secondItem="O5s-cY-wQU" secondAttribute="leading" id="MsF-0G-8AF"/>
@@ -230,9 +230,8 @@ CHANGE YOUR LIFE</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="start the timer and watch your partner's eyes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO9-4C-A5a">
-                                <rect key="frame" x="16" y="112" width="361" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start the timer and watch your partner's eyes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO9-4C-A5a">
+                                <rect key="frame" x="20" y="112" width="353" height="92"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="27"/>
                                 <color key="textColor" red="0.74901962280000001" green="0.18039217590000001" blue="0.22745099660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -248,24 +247,36 @@ CHANGE YOUR LIFE</string>
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="240" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojW-20-Uoq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojW-20-Uoq">
                                 <rect key="frame" x="123" y="383" width="147" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="nLI-ox-I30"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="textColor" red="0.77647060160000003" green="0.18823529780000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UkV-AI-7YF">
-                                <rect key="frame" x="21" y="251" width="350" height="350"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UkV-AI-7YF">
+                                <rect key="frame" x="20" y="249" width="353" height="354"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Eez-UW-Q5O"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Eez-UW-Q5O" firstAttribute="trailing" secondItem="gO9-4C-A5a" secondAttribute="trailing" constant="20" id="DrN-sg-jCG"/>
+                            <constraint firstItem="gO9-4C-A5a" firstAttribute="leading" secondItem="Eez-UW-Q5O" secondAttribute="leading" constant="20" id="IgL-15-gdR"/>
                             <constraint firstItem="Eez-UW-Q5O" firstAttribute="trailing" secondItem="dNW-ke-yHh" secondAttribute="trailing" constant="20" id="LGv-gG-P3g"/>
+                            <constraint firstItem="dNW-ke-yHh" firstAttribute="top" secondItem="UkV-AI-7YF" secondAttribute="bottom" constant="130" id="NT4-7n-UGo"/>
+                            <constraint firstItem="UkV-AI-7YF" firstAttribute="leading" secondItem="Eez-UW-Q5O" secondAttribute="leading" constant="20" id="NlL-oc-CrX"/>
+                            <constraint firstItem="UkV-AI-7YF" firstAttribute="centerX" secondItem="ojW-20-Uoq" secondAttribute="centerX" id="O46-bS-dRW"/>
+                            <constraint firstItem="UkV-AI-7YF" firstAttribute="centerY" secondItem="sAk-cy-pq6" secondAttribute="centerY" id="QKG-ji-OuN"/>
+                            <constraint firstItem="ojW-20-Uoq" firstAttribute="leading" secondItem="Eez-UW-Q5O" secondAttribute="leading" constant="123" id="WDM-5B-Xn6"/>
+                            <constraint firstItem="Eez-UW-Q5O" firstAttribute="trailing" secondItem="UkV-AI-7YF" secondAttribute="trailing" constant="20" id="WPb-vr-NWu"/>
+                            <constraint firstItem="UkV-AI-7YF" firstAttribute="centerY" secondItem="ojW-20-Uoq" secondAttribute="centerY" id="dXb-O0-5ui"/>
                             <constraint firstItem="Eez-UW-Q5O" firstAttribute="bottom" secondItem="dNW-ke-yHh" secondAttribute="bottom" constant="35" id="fdN-ef-O5s"/>
                             <constraint firstItem="dNW-ke-yHh" firstAttribute="leading" secondItem="Eez-UW-Q5O" secondAttribute="leading" constant="20" id="hFW-BQ-Ujv"/>
+                            <constraint firstItem="gO9-4C-A5a" firstAttribute="top" secondItem="Eez-UW-Q5O" secondAttribute="top" constant="53" id="jLN-Tp-kgO"/>
+                            <constraint firstItem="UkV-AI-7YF" firstAttribute="top" secondItem="gO9-4C-A5a" secondAttribute="bottom" constant="45" id="q8b-kO-hV3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L6b-vA-1JD"/>
@@ -288,21 +299,23 @@ CHANGE YOUR LIFE</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeP-Be-wn8">
-                                <rect key="frame" x="24" y="732" width="353" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeP-Be-wn8">
+                                <rect key="frame" x="20" y="733" width="353" height="50"/>
                                 <color key="backgroundColor" red="0.77647060160000003" green="0.18823529780000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Grg-TR-NcX"/>
+                                    <constraint firstAttribute="width" constant="353" id="JZi-Pm-8Rn"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Share via">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="shareButtonTapped:" destination="NP5-RJ-uzb" eventType="touchUpInside" id="KCN-Ie-sOh"/>
+                                    <action selector="shareButton:" destination="NP5-RJ-uzb" eventType="touchUpInside" id="KCN-Ie-sOh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Well done!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZr-HO-4Yy">
-                                <rect key="frame" x="16" y="354" width="361" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Well done!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZr-HO-4Yy">
+                                <rect key="frame" x="16" y="354" width="361" height="66.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.77647060160000003" green="0.18823529780000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -310,6 +323,15 @@ CHANGE YOUR LIFE</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wD7-Uh-jId"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sZr-HO-4Yy" firstAttribute="top" secondItem="wD7-Uh-jId" secondAttribute="top" constant="295" id="9Vt-Ll-vcu"/>
+                            <constraint firstItem="SeP-Be-wn8" firstAttribute="top" secondItem="sZr-HO-4Yy" secondAttribute="bottom" constant="312.67000000000002" id="CDj-ZW-auM"/>
+                            <constraint firstItem="wD7-Uh-jId" firstAttribute="bottom" secondItem="SeP-Be-wn8" secondAttribute="bottom" constant="35" id="Ck3-PC-UUm"/>
+                            <constraint firstItem="wD7-Uh-jId" firstAttribute="trailing" secondItem="SeP-Be-wn8" secondAttribute="trailing" constant="20" id="K3g-Ea-qvT"/>
+                            <constraint firstItem="wD7-Uh-jId" firstAttribute="trailing" secondItem="sZr-HO-4Yy" secondAttribute="trailing" constant="16" id="X9j-9g-My7"/>
+                            <constraint firstItem="SeP-Be-wn8" firstAttribute="leading" secondItem="wD7-Uh-jId" secondAttribute="leading" constant="20" id="f2b-2L-YIj"/>
+                            <constraint firstItem="sZr-HO-4Yy" firstAttribute="leading" secondItem="wD7-Uh-jId" secondAttribute="leading" constant="16" id="v3f-Fz-XOr"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="shareViaButton" destination="SeP-Be-wn8" id="9Tu-xt-40e"/>

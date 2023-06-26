@@ -33,7 +33,7 @@ class FinalScreenViewController: UIViewController, UIDocumentInteractionControll
 
   }
 
-  @IBAction func shareButtonTapped(_ sender: UIButton) {
+  @IBAction func shareButton(_ sender: UIButton) {
     // Открываем панель действий для поделиться ссылкой
     documentInteractionController.presentOptionsMenu(from: sender.frame, in: view, animated: true)  }
 

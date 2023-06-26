@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PageForQuestions: UIViewController {
+class PageForQuestionsViewController: UIViewController {
   
   let listOfQuestions: [String] = [
     "Given the choice of anyone in the world, whom would you want as a dinner guest?",
@@ -55,8 +55,9 @@ class PageForQuestions: UIViewController {
   
   var currentQuestionIndex = 0
   var currentQuestionNumberIndex = 0
-  // Скрытие кнопки Back
   let indexZero = 0
+
+  // Скрытие и показ кнопки Back
   func hidingButtonBack() {
     if questionLabel.text == listOfQuestions[indexZero] {
       backButton.isHidden = true
@@ -72,7 +73,6 @@ class PageForQuestions: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
   }
   
   @IBAction func nextButton(_ sender: UIButton) {
@@ -99,9 +99,7 @@ class PageForQuestions: UIViewController {
       
       // Выполняем переход на следующий экран с использованием навигационного контроллера
       navigationController?.pushViewController(nextViewController, animated: true)
-      
     }
-    
     hidingButtonBack()
   }
   
@@ -117,11 +115,10 @@ class PageForQuestions: UIViewController {
     hidingButtonBack()
   }
   
-  @IBAction func restartButtonPressed(_ sender: UIButton) {
+  @IBAction func restartButton(_ sender: UIButton) {
     // dismiss(animated: true, completion: nil)
     self.presentingViewController!.dismiss(animated: false, completion: nil)
   }
-  
 }
 
 

@@ -58,7 +58,6 @@ class TimerViewController: UIViewController {
 
     durationTimer = originalDuration
     timerLabel.text = "\(durationTimer)"
-
   }
 
   @objc func timetAction() {

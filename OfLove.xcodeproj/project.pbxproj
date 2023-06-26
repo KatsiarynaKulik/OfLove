@@ -14,8 +14,8 @@
 		C43390EE2A253849001ACD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43390EC2A253849001ACD21 /* Main.storyboard */; };
 		C43390F02A25384A001ACD21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43390EF2A25384A001ACD21 /* Assets.xcassets */; };
 		C43390F32A25384A001ACD21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43390F12A25384A001ACD21 /* LaunchScreen.storyboard */; };
-		C43390FD2A27D525001ACD21 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43390FC2A27D525001ACD21 /* MainMenu.swift */; };
-		C4D021EB2A2E07B900F5D7C2 /* PageForQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D021EA2A2E07B900F5D7C2 /* PageForQuestions.swift */; };
+		C43390FD2A27D525001ACD21 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43390FC2A27D525001ACD21 /* MainMenuViewController.swift */; };
+		C4D021EB2A2E07B900F5D7C2 /* PageForQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D021EA2A2E07B900F5D7C2 /* PageForQuestionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		C43390EF2A25384A001ACD21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C43390F22A25384A001ACD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C43390F42A25384A001ACD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C43390FC2A27D525001ACD21 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
-		C4D021EA2A2E07B900F5D7C2 /* PageForQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageForQuestions.swift; sourceTree = "<group>"; };
+		C43390FC2A27D525001ACD21 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		C4D021EA2A2E07B900F5D7C2 /* PageForQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageForQuestionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +43,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C41C3A712A4632BD00BE0AE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C41C3A722A4632D000BE0AE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C43390EC2A253849001ACD21 /* Main.storyboard */,
+				C43390F12A25384A001ACD21 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C41C3A732A4632D600BE0AE8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C43390E62A253849001ACD21 /* AppDelegate.swift */,
+				C43390FC2A27D525001ACD21 /* MainMenuViewController.swift */,
+				C4D021EA2A2E07B900F5D7C2 /* PageForQuestionsViewController.swift */,
+				C41C3A6D2A375B4A00BE0AE8 /* TimerViewController.swift */,
+				C41C3A6F2A4341B100BE0AE8 /* FinalScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C41C3A752A4633F900BE0AE8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C43390E82A253849001ACD21 /* SceneDelegate.swift */,
+				C43390EF2A25384A001ACD21 /* Assets.xcassets */,
+				C43390F42A25384A001ACD21 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C43390DA2A253849001ACD21 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +100,10 @@
 		C43390E52A253849001ACD21 /* OfLove */ = {
 			isa = PBXGroup;
 			children = (
-				C43390E62A253849001ACD21 /* AppDelegate.swift */,
-				C43390E82A253849001ACD21 /* SceneDelegate.swift */,
-				C43390EC2A253849001ACD21 /* Main.storyboard */,
-				C41C3A6F2A4341B100BE0AE8 /* FinalScreenViewController.swift */,
-				C41C3A6D2A375B4A00BE0AE8 /* TimerViewController.swift */,
-				C4D021EA2A2E07B900F5D7C2 /* PageForQuestions.swift */,
-				C43390FC2A27D525001ACD21 /* MainMenu.swift */,
-				C43390EF2A25384A001ACD21 /* Assets.xcassets */,
-				C43390F12A25384A001ACD21 /* LaunchScreen.storyboard */,
-				C43390F42A25384A001ACD21 /* Info.plist */,
+				C41C3A712A4632BD00BE0AE8 /* Model */,
+				C41C3A722A4632D000BE0AE8 /* View */,
+				C41C3A732A4632D600BE0AE8 /* Controller */,
+				C41C3A752A4633F900BE0AE8 /* Supporting Files */,
 			);
 			path = OfLove;
 			sourceTree = "<group>";
@@ -150,10 +182,10 @@
 			files = (
 				C41C3A6E2A375B4A00BE0AE8 /* TimerViewController.swift in Sources */,
 				C41C3A702A4341B100BE0AE8 /* FinalScreenViewController.swift in Sources */,
-				C4D021EB2A2E07B900F5D7C2 /* PageForQuestions.swift in Sources */,
+				C4D021EB2A2E07B900F5D7C2 /* PageForQuestionsViewController.swift in Sources */,
 				C43390E72A253849001ACD21 /* AppDelegate.swift in Sources */,
 				C43390E92A253849001ACD21 /* SceneDelegate.swift in Sources */,
-				C43390FD2A27D525001ACD21 /* MainMenu.swift in Sources */,
+				C43390FD2A27D525001ACD21 /* MainMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +334,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XN7SPBLRTW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OfLove/Info.plist;
+				INFOPLIST_FILE = "OfLove/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -335,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XN7SPBLRTW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OfLove/Info.plist;
+				INFOPLIST_FILE = "OfLove/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
