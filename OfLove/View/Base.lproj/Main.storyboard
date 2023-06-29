@@ -248,7 +248,7 @@ CHANGE YOUR LIFE</string>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojW-20-Uoq">
-                                <rect key="frame" x="123" y="383" width="147" height="87"/>
+                                <rect key="frame" x="123" y="382.66666666666669" width="147" height="87"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="nLI-ox-I30"/>
                                 </constraints>

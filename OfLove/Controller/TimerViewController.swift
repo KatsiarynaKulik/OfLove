@@ -45,6 +45,7 @@ class TimerViewController: UIViewController {
 
     timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timetAction), userInfo: nil, repeats: true)
 
+    // Меняются настройки кнопки
     startButton.setTitle("Stop", for: .normal)
   }
 
@@ -54,6 +55,7 @@ class TimerViewController: UIViewController {
 
     shapeLayer.removeAllAnimations()
 
+    // Меняются настройки кнопки
     startButton.setTitle("Start", for: .normal)
 
     durationTimer = originalDuration
