@@ -20,6 +20,7 @@ class MainMenuViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     getStartButton.layer.cornerRadius = 25
+//    getStartButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
   }
 }
 

@@ -28,31 +28,60 @@ class PageForQuestionsViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
     ofLoveData = OfLoveData()
+
+    // Выводим текущий элемент массива в Label
+    if ofLoveData.currentQuestionIndex < ofLoveData.listOfQuestions.count {
+      questionLabel.text = ofLoveData.listOfQuestions[ofLoveData.currentQuestionIndex]
+    } else {
+      // Обрабатываем случай, когда currentQuestionIndex выходит за пределы допустимого диапазона
+      questionLabel.text = ""
+    }
+
+    if ofLoveData.currentQuestionNumberIndex < ofLoveData.questionNumber.count {
+      questionNumberLabel.text = ofLoveData.questionNumber[ofLoveData.currentQuestionNumberIndex]
+    } else {
+      // Обрабатываем случай, когда currentQuestionNumberIndex выходит за пределы допустимого диапазона
+      questionNumberLabel.text = ""
+    }
+    hidingButtonBack()
   }
   
   @IBAction func nextButton(_ sender: UIButton) {
-    // Выводим текущий элемент массива в Label
-    questionLabel.text = ofLoveData.listOfQuestions[ofLoveData.currentQuestionIndex]
-    questionNumberLabel.text = ofLoveData.questionNumber[ofLoveData.currentQuestionNumberIndex]
+
+    // Увеличиваем индекс для следующего нажатия
+    ofLoveData.currentQuestionIndex += 1
+    ofLoveData.currentQuestionNumberIndex += 1
+
+    if ofLoveData.currentQuestionIndex < ofLoveData.listOfQuestions.count {
+      // Выводим текущий элемент массива в Label
+      questionLabel.text = ofLoveData.listOfQuestions[ofLoveData.currentQuestionIndex]
+    } else {
+      // Обрабатываем случай, когда currentQuestionIndex выходит за пределы допустимого диапазона
+      questionLabel.text = ""
+    }
+
+    if ofLoveData.currentQuestionNumberIndex < ofLoveData.questionNumber.count {
+      questionNumberLabel.text = ofLoveData.questionNumber[ofLoveData.currentQuestionNumberIndex]
+    } else {
+      // Обрабатываем случай, когда currentQuestionNumberIndex выходит за пределы допустимого диапазона
+      questionNumberLabel.text = ""
+    }
     
     // Изменяется текст кнопки
     if ofLoveData.currentQuestionIndex == ofLoveData.listOfQuestions.index(before: 36) {
       nextFinishButton.setTitle("Finish", for: .normal)
     }
     
-    // Увеличиваем индекс для следующего нажатия
-    ofLoveData.currentQuestionIndex += 1
-    ofLoveData.currentQuestionNumberIndex += 1
-
-  // Проверяем, достигли ли конца массива после увеличения индекса
+    // Проверяем, достигли ли конца массива после увеличения индекса
     if ofLoveData.currentQuestionIndex >= ofLoveData.listOfQuestions.count {
       // Создаем экземпляр следующего экрана
       let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
       let nextViewController = storyBoard.instantiateViewController(withIdentifier: "timierViewCon")
       nextViewController.modalPresentationStyle = .fullScreen
       self.present(nextViewController, animated: true, completion: nil)
-      
+
       // Выполняем переход на следующий экран с использованием навигационного контроллера
       navigationController?.pushViewController(nextViewController, animated: true)
     }
